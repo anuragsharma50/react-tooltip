@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 
+// function to fix positon of tooltip based on positon provided by user
 const setPosition = (position) => {
-
     switch(position) {
         case "top": 
             return "bottom: calc(100% + 12px);";
@@ -15,6 +15,7 @@ const setPosition = (position) => {
     }
 }
 
+// function to fix positon of small triangle of tooltip
 const setTrianglePosition = (position) => {
     switch(position) {
         case "top": 
@@ -62,18 +63,11 @@ const TooltipText = styled.div`
 
 export const Tooltip = ({children,text,position="right"}) => {
 
+    // show and hide tooltip based on moveover and mouseout event
     const [show,setShow] = useState(false);
 
-    const showTooltip = () => {
-        setShow(true);
-    }
-
-    const hideTooltip = () => {
-        setShow(false);
-    }
-
     return (
-        <TooltipContainer onMouseOver={showTooltip} onMouseOut={hideTooltip}>
+        <TooltipContainer onMouseOver={() => setShow(true)} onMouseOut={() => setShow(false)}>
             {children}
             { show && <TooltipText position={position}>{text}</TooltipText> }
         </TooltipContainer>

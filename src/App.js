@@ -4,6 +4,7 @@ import { Tooltip } from './Components/Tooltip';
 function App() {
   return (
     <div className="App">
+      {/* text is mendatory, position is optional and if not provided will be right */}
       <Tooltip text="Hello" position="top">
         <button className='btn'>Say Hello</button>
       </Tooltip>
