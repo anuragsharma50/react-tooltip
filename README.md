@@ -2,7 +2,7 @@
 
 Tooltip component to be used on any element to show tooltip
 
-code eg: 
+Code eg: 
   ```
       <Tooltip text="Hello" position="top">
         <button className='btn'>Say Hello</button>
