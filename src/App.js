@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { Tooltip } from './Components/Tooltip';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tooltip text="Hello" position="top">
+        <button className='btn'>Say Hello</button>
+      </Tooltip>
+      <Tooltip text="I am a cat" position="left">
+        <p>Cat</p>
+      </Tooltip>
+      <Tooltip text="I am Batman" position="right">
+        <img className='batman' src='https://purepng.com/public/uploads/large/purepng.com-batman-arkhambatmansuperherocomicdc-comicsbob-kanebat-manbruce-wayne-1701528525941b0tug.png' alt='Batman' />
+      </Tooltip>
     </div>
   );
 }
