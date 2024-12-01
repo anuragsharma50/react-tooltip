@@ -1,5 +1,7 @@
 # React Tooltip
 
+npm package of the component - https://www.npmjs.com/package/tooltip-for-react
+
 Tooltip component to be used on any element to show tooltip
 
 Code eg: 
